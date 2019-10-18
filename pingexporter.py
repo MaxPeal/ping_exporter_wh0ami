@@ -3,7 +3,7 @@
 
 #     Dev: wh0ami
 # Licence: Public Domain <https://unlicense.org>
-# Project: https://codeberg.org/wh0ami/lsp_bot
+# Project: https://codeberg.org/wh0ami/ping_exporter
 
 # Python3 Prometheus Exporter for pinging your systems
 # ping library
