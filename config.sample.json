@@ -1,0 +1,11 @@
+{
+  "config": {
+    "packet_count": 5,
+    "packet_bytes": 32,
+    "interval_ms": 300,
+    "timeout_ms": 1000,
+    "show_config": true,
+    "ip": "0.0.0.0",
+    "port": 9102
+  }
+}

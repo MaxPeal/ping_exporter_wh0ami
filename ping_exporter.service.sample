@@ -1,0 +1,19 @@
+# Ping Exporter for Prometheus Systemd-Unit
+
+[Unit]
+Description=Ping Exporter for Prometheus
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+User=ping_exporter
+Group=ping_exporter
+WorkingDirectory=/opt/ping_exporter/
+ExecStart=/opt/ping_exporter/exporter.py /opt/ping_exporter/config.json
+Restart=always
+Environment=USER=ping_exporter HOME=/opt/ping_exporter/
+StandardOutput=null
+
+[Install]
+WantedBy=multi-user.target
