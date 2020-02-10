@@ -5,7 +5,7 @@ This is a Exporter for monitoring pings to your systems with prometheus.
 ### Setup
 ```shell
 root@testpi:/# cd <your app directory>
-root@testpi:/opt# git clone https://git.purelinux.de/Karl/ping_exporter.git
+root@testpi:/opt# git clone https://codeberg.org/wh0ami/ping_exporter
 root@testpi:/opt# cd ping_exporter
 root@testpi:/opt/ping_exporter# useradd -d $(pwd) --shell /bin/false ping_exporter
 root@testpi:/opt/ping_exporter# usermod -L ping_exporter
@@ -19,7 +19,7 @@ root@testpi:/opt/ping_exporter# systemctl enable --now ping_exporter
 ```
 
 The service should now run on `0.0.0.0:9102`. You can customize the listen ip and the used port in the `config.json` file.
-You can call the exporter now via a GET request, e.g. `curl http://localhost:9102/?target=db.de`.
+You can call the exporter now via a GET request, e.g. `curl http://localhost:9102/?target=codeberg.org`.
 
 **Warning:** You will run this program with a non-root user, so your interval in the `config.json` must be at least 200ms! Otherwise the program will not work!
 
